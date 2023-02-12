@@ -1,0 +1,51 @@
+// import { useState } from 'react'
+//  const rad = ['qwert1','hjsfdr3','htrfgss5','jyhed9','dsfsd7']
+// function App() {
+//   const [count, setCount] = useState('');
+//   function tang(){ setCount(rad[Math.floor(Math.random()*rad.length)]);}
+//   function giam() {setCount(count -1);}
+  
+//   return (
+//     <div className="App">
+//       <h1 >{count ||'qwe577'}</h1>
+//       <button onClick={tang}>clickme</button>
+      
+//       {/* <button onClick={giam}>giaM</button> */}
+//     </div>
+//   );
+// }
+
+// export default App;
+// chức năng radom ra 1 phần tử từ mảng
+import { useState } from 'react'
+ const rad = [{
+  id: 1,
+  name : 'html'
+ },{
+  id: 2,
+  name : 'js'
+ },{
+  id: 3,
+  name : 'css'
+ },{
+  id: 4,
+  name : 'python'
+ }
+]
+function App() {
+  const [check,setcheck] = useState()
+  
+  return (
+    <div className="App">
+      <ul>
+        {rad.map(function(ele,index){return 
+        <li key={ele.id}>{ele.name}</li>})}
+      </ul>
+      {/* <button onClick={tang}>clickme</button> */}
+      
+      {/* <button onClick={giam}>giaM</button> */}
+    </div>
+  );
+}
+
+export default App;
